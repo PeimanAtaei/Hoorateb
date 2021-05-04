@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#031d21</color>
+    <color name="colorPrimaryDark">#001a1b</color>
+    <color name="colorAccent">#D31239</color>
+    <color name="colorAccent2">#F32029</color>
+    <color name="colorAccentBlue">#04BC6C</color>
+    <color name="colorBackGround">#ffffff</color>
+
+    <color name="trans">#00ffffff</color>
+    <color name="white_trans">#3bffffff</color>
+    <color name="white_gray">#EFEFEF</color>
+    <color name="white_gray2">#DDDDDD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green_trans">#ac50ae3d</color>
+    <color name="green">#BB147C00</color>
+    <color name="light_green">#29ff00</color>
+    <color name="yasi">#00ffcc</color>
+    <color name="colorPrimaryDark_trans">#c3001a1b</color>
+    <color name="colorPrimary_trans">#db031d21</color>
+    <color name="black_trans">#6a000000</color>
+    <color name="colorIcon">#FCFAFF</color>
+    <color name="search_layover_bg">#80000000</color>
+
+    <color name="progress_blue">#00BCD4</color>
+    <color name="progress_purple">#C34AC1</color>
+    <color name="progress_green">#4CAF50</color>
+    <color name="progress_orange">#FF9800</color>
+    <color name="step_color">#EA0762</color>
+
+    <color name="input_color">#dddddd</color>
+    <color name="button_color">#F32029</color>
+    <color name="button_color_pressed">#A50A29</color>
+    <color name="text_color">#007b6b</color>
+    <color name="text_color2">#242424</color>
+    <color name="hint_color">#757575</color>
+</resources>

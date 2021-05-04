@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment.PaymentDetailActivity"
+    android:textDirection="rtl"
+    android:layoutDirection="ltr"
+    android:background="@color/white_gray"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backshapes2"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/payment_detail_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:theme="@style/AppTheme.Toolbar"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_normal"
+            android:text="جزئیات سفارش"
+            android:textSize="@dimen/text_size_larg"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/payment_detail_toolBar"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payment_detail_activity_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/comment_empty_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small"
+                android:text="نظری یافت نشد!!!"
+                android:textColor="@color/text_color2"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/payment_detail_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_detail_toolBar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin_small"
+                android:background="@drawable/selector_background_white"
+                android:gravity="center"
+                android:elevation="4dp"
+                >
+
+                <com.shuhart.stepview.StepView
+                    android:id="@+id/step_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_size_normal"
+                    android:layout_marginLeft="@dimen/text_size_normal"
+                    android:layout_marginTop="@dimen/text_size_normal"
+                    android:padding="16dp"
+                    app:sv_selectedCircleColor="@color/white_gray"
+                    app:sv_selectedTextColor="@color/colorAccent"
+                    app:sv_stepLineWidth="1dp"
+                    app:sv_stepPadding="5dp"
+                    app:sv_nextTextColor="@color/colorPrimary"
+                    app:sv_nextStepLineColor="@color/white_gray"
+                    app:sv_doneCircleColor="@color/colorAccent2"
+                    app:sv_doneStepLineColor="@color/colorAccent"
+                    app:sv_doneCircleRadius="20dp"
+                    app:sv_selectedCircleRadius="20dp"
+                    app:sv_selectedStepNumberColor="@color/colorPrimary"
+                    app:sv_stepViewStyle="@style/StepView"
+                    app:sv_doneStepMarkColor="@color/colorPrimary"
+                    app:sv_stepNumberTextSize="12sp"
+                    app:sv_animationType="Line"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="وضعیت سفارش"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/colorAccent2"/>
+                <TextView
+                    android:id="@+id/payment_detail_header_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="وضعیت سفارش"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/text_color2"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_normal"
+                android:background="@drawable/selector_background_white"
+                android:elevation="4dp"
+                android:layout_marginRight="@dimen/margin_elevation"
+                android:layout_marginLeft="@dimen/margin_elevation"
+                android:layout_marginTop="@dimen/margin_elevation"
+                android:layout_marginBottom="@dimen/margin_small"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="@dimen/text_size_larg"
+                    android:text="خلاصه سفارش شما"
+                    android:textColor="@color/colorAccent2"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_normal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="کد پیگیری سفارش"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="OR56223311"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/text_color2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="تعداد کل محصولات"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="1 مورد"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/text_color2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="مبلغ کل محصولات"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="0 تومان"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/text_color2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="میزان تخفیف شما"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_discount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="0 تومان"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/text_color2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="تاریخ ثبت سفارش"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="0 تومان"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/text_color2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/hint_color"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_normal"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="مبلغ پرداخته شده"
+                            android:textSize="@dimen/text_size_larg"
+                            android:textColor="@color/hint_color"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/ic_baseline_arrow_left"
+                            android:paddingRight="@dimen/margin_small"/>
+                        <TextView
+                            android:id="@+id/basket_total_order_final_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="0 تومان"
+                            android:textSize="@dimen/text_size_larg"
+                            android:textColor="@color/colorAccent2"
+                            android:gravity="left"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/selector_background_white"
+                android:padding="10dp"
+                android:layout_margin="@dimen/margin_elevation"
+                android:elevation="4dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/payment_header_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text=""
+                    android:gravity="center|right"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_normal"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_normal"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:id="@+id/eachItem_payment_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/selector_background_white"
+                android:paddingBottom="@dimen/margin_normal"
+                android:layout_margin="@dimen/margin_elevation"
+                android:elevation="4dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/eachItem_payment_image"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/product_eachitem"
+                        android:adjustViewBounds="true"
+                        android:visibility="visible"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="نام محصول"
+                            android:textColor="@color/text_color2"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/text_size_larg"
+                            android:ellipsize="end"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="توضیحات محصول با توجه به ویژگی های و نکات مختلف بر اساس موارد بیان شده در صفحه توضیحات"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:textSize="@dimen/text_size_normal"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:gravity="center"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="قیمت :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/toman"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="تعداد :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/selector_background_white"
+                android:paddingBottom="@dimen/margin_normal"
+                android:layout_margin="@dimen/margin_elevation"
+                android:elevation="4dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/product_eachitem"
+                        android:adjustViewBounds="true"
+                        android:visibility="visible"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="نام محصول"
+                            android:textColor="@color/text_color2"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/text_size_larg"
+                            android:ellipsize="end"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="توضیحات محصول با توجه به ویژگی های و نکات مختلف بر اساس موارد بیان شده در صفحه توضیحات"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:textSize="@dimen/text_size_normal"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:gravity="center"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="قیمت :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/toman"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="تعداد :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layoutDirection="rtl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/selector_background_white"
+                android:paddingBottom="@dimen/margin_normal"
+                android:layout_margin="@dimen/margin_elevation"
+                android:elevation="4dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/product_eachitem"
+                        android:adjustViewBounds="true"
+                        android:visibility="visible"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="نام محصول"
+                            android:textColor="@color/text_color2"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:textSize="@dimen/text_size_larg"
+                            android:ellipsize="end"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="توضیحات محصول با توجه به ویژگی های و نکات مختلف بر اساس موارد بیان شده در صفحه توضیحات"
+                            android:textColor="@color/hint_color"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:textSize="@dimen/text_size_normal"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:gravity="center"
+                            >
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="right"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="قیمت :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.2"
+                                    android:src="@drawable/toman"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="تعداد :"
+                                    android:textColor="@color/text_color2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="25000"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="@dimen/margin_small"
+                                    android:layout_marginRight="@dimen/margin_normal"
+                                    android:textColor="@color/colorAccent2"
+                                    android:textSize="@dimen/text_size_normal"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

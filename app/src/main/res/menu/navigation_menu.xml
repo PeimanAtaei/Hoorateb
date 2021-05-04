@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/app_group" android:checkableBehavior="single">
+
+        <item android:id="@+id/menu_navigation_wallet_balance"
+            android:title="درباره ما"
+            android:icon="@drawable/textlogo1"  />
+
+        <item android:id="@+id/menu_navigation_explain"
+            android:title="سایت حورا طب"
+            android:icon="@drawable/ic_global"
+            android:iconTint="@color/colorAccent2"
+            />
+
+        <item android:id="@+id/menu_navigation_usage"
+            android:title="کانال تلگرامی حورا طب"
+            android:icon="@drawable/ic_telegram"
+            android:iconTint="@color/colorAccent2"
+            />
+
+        <item android:id="@+id/menu_navigation_sell"
+            android:title="پیج اینستاگرامی حورا طب"
+            android:icon="@drawable/ic_instagram_sketched"
+            android:iconTint="@color/colorAccent2"
+            />
+
+        <item android:id="@+id/menu_navigation_about"
+            android:title="تماس با ما"
+            android:icon="@drawable/ic_baseline_local_phone" />
+
+    </group>
+</menu>

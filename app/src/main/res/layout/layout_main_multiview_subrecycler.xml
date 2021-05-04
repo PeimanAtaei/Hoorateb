@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/selector_background_white"
+                android:padding="10dp"
+                android:layout_margin="@dimen/margin_elevation"
+                android:elevation="4dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/main_horizontal_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="جدید ترین ها"
+                    android:gravity="center|right"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_normal"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_normal"
+                    />
+
+                <TextView
+                    android:id="@+id/main_horizontal_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="مشاهده همه"
+                    android:gravity="center|left"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingLeft="@dimen/margin_normal"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/text_size_normal"
+
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_horizontal_subRecycler"
+                android:orientation="vertical"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                />
+        </LinearLayout>
+</LinearLayout>

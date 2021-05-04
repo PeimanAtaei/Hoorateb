@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/product_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    >
+
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_elevation"
+            android:background="@drawable/selector_background_white"
+            android:elevation="4dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/product_eachitem"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/margin_normal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_brand"
+                android:textColor="@color/hint_color"
+                android:paddingRight="@dimen/margin_small"
+                android:textSize="@dimen/text_size_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="عنوان محصول"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_title"
+                android:textColor="@color/text_color2"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:textSize="@dimen/text_size_normal"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="عنوان محصول"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_description"
+                android:textColor="@color/hint_color"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:text="توضیحات محصول با توجه به موارد مختلف در محصوا"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_normal"
+                >
+
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="25"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/text_size_normal"
+                    />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/toman"
+                    android:layout_alignBottom="@id/product_price"
+                    android:layout_alignTop="@id/product_price"
+                    android:layout_toLeftOf="@id/product_price"
+                    android:paddingBottom="3dp"
+                    />
+
+                <TextView
+                    android:id="@+id/product_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:background="@drawable/selector_botton_rounded"
+                    android:text="25% تخفیف"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentLeft="true"
+                    android:padding="2dp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

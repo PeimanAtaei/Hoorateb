@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textDirection="rtl"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/selector_background_white"
+        android:layout_margin="@dimen/margin_small"
+        >
+
+        <TextView
+            android:id="@+id/update_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حساب کاربری شما ناقص می باشد"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorAccent2"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_larg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="دوست عزیز\nبرای تکمیل فرایند خرید محصولا ابتدا باید اطلاعات شخصی و آدرس خود را در بخش پروفایل تکمیل نمایید"
+            android:layout_marginRight="@dimen/margin_larg"
+            android:layout_marginLeft="@dimen/margin_larg"
+            android:gravity="center"
+            android:textColor="@color/text_color2"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_normal"
+            >
+            <Button
+                android:id="@+id/detail_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/selector_green_botton"
+                android:textColor="@android:color/white"
+                android:text="باشه"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "120185952257",
+    "firebase_url": "https://hoorateb.firebaseio.com",
+    "project_id": "hoorateb",
+    "storage_bucket": "hoorateb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120185952257:android:42c7eeb3b1a1404b768800",
+        "android_client_info": {
+          "package_name": "com.atisapp.hoorateb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120185952257-ilkve48uhj4oprrvvj4fnt4cqon4ng14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.atisapp.hoorateb",
+            "certificate_hash": "c4ef4469db4796ed9d374c805717dc533915757c"
+          }
+        },
+        {
+          "client_id": "120185952257-p6p09nhr8ubni4hpu8tcdgh3l71k79s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoNiTxgKFsxLbneq3lnydZIKmCxUjCnXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120185952257-p6p09nhr8ubni4hpu8tcdgh3l71k79s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

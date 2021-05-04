@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <LinearLayout
+        android:id="@+id/payment_eachItem_order_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background_white"
+        android:layout_margin="@dimen/margin_small"
+        android:padding="@dimen/margin_small"
+        android:elevation="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            >
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/payment_eachItem_progress"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:arc_progress="20"
+                app:arc_unfinished_color="@color/white_gray"
+                app:arc_finished_color="@color/colorAccent"
+                app:arc_text_color="@color/colorPrimary"
+                app:arc_suffix_text_padding="-2dp"
+                app:arc_text_size="25sp"
+                />
+            <TextView
+                android:id="@+id/payment_eachItem_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="وضعیت محصول"
+                android:gravity="center"
+                android:textColor="@color/text_color2"
+                android:textSize="@dimen/text_size_normal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="وضعیت محصول"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_small"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/white_gray2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="شماره سفارش"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/hint_color"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    />
+                <TextView
+                    android:id="@+id/payment_eachItem_order_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="IR5230461"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/text_color2"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    android:text="مبلغ سفارش"
+                    android:textColor="@color/hint_color"
+                    android:textSize="@dimen/text_size_normal" />
+                <TextView
+                    android:id="@+id/payment_eachItem_order_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="125000 تومان"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/text_color2"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="تاریخ ثبت"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/hint_color"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    />
+                <TextView
+                    android:id="@+id/payment_eachItem_order_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text="15 / 02 / 99"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/text_color2"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="برای مشاهده جزئیات کلیک کنید"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/colorAccent2"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

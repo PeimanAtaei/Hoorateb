@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="rtl"
+    android:background="@drawable/backred"
+    tools:context=".MainFragment.ui.account.EditAdressActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/backshapes"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/address_next_btn"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="آدرس محل دریافت محصول"/>
+        <EditText
+            android:id="@+id/edit_address_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/selector_background_white"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:hint="مثلا تهران - خیابان ..."
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:textColor="@color/text_color2"
+            android:textColorHint="@color/hint_color"
+            android:padding="@dimen/margin_normal"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="پلاک منزل"/>
+        <EditText
+            android:id="@+id/edit_address_plate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_background_white"
+            android:elevation="4dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:hint="مثلا 1"
+            android:gravity="center"
+            android:textColor="@color/text_color2"
+            android:textColorHint="@color/hint_color"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/margin_normal"
+            android:layout_below="@id/login_user_edit_text"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="واحد"/>
+
+        <EditText
+            android:id="@+id/edit_address_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_user_edit_text"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/selector_background_white"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:hint="مثلا 7"
+            android:inputType="number"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:padding="@dimen/margin_normal"
+            android:textColor="@color/text_color2"
+            android:textColorHint="@color/hint_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="کد پستی"/>
+        <EditText
+            android:id="@+id/edit_address_post_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_background_white"
+            android:elevation="4dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:hint="مثلا 26554120"
+            android:gravity="center"
+            android:textColor="@color/text_color2"
+            android:textColorHint="@color/hint_color"
+            android:textSize="15sp"
+            android:inputType="textPostalAddress"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/margin_normal"
+            android:layout_below="@id/login_user_edit_text"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/address_next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/selector_background_white"
+        android:text="ثبت اطلاعات"
+        android:textColor="@color/green"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_larg"
+        />
+
+</RelativeLayout>

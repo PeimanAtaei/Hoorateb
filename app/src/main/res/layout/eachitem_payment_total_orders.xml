@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_normal"
+        android:background="@drawable/selector_background_white"
+        android:elevation="4dp"
+        android:layout_marginRight="@dimen/margin_elevation"
+        android:layout_marginLeft="@dimen/margin_elevation"
+        android:layout_marginTop="@dimen/margin_elevation"
+        android:layout_marginBottom="@dimen/margin_small"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="@dimen/text_size_larg"
+                android:text="خلاصه سفارش شما"
+                android:textColor="@color/colorAccent2"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"/>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="کد پیگیری سفارش"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/hint_color"
+                android:gravity="right"
+                android:drawableRight="@drawable/ic_baseline_arrow_left"
+                android:paddingRight="@dimen/margin_small"/>
+            <TextView
+                android:id="@+id/basket_total_payment_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="OR56223311"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color2"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="تعداد کل محصولات"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/hint_color"
+                android:gravity="right"
+                android:drawableRight="@drawable/ic_baseline_arrow_left"
+                android:paddingRight="@dimen/margin_small"/>
+               <TextView
+                   android:id="@+id/basket_total_order_count"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:text="1 مورد"
+                   android:textSize="@dimen/text_size_normal"
+                   android:textColor="@color/text_color2"
+                   android:gravity="left"
+                 />
+
+           </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="مبلغ کل محصولات"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/hint_color"
+                    android:gravity="right"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    android:paddingRight="@dimen/margin_small"/>
+                <TextView
+                    android:id="@+id/basket_total_order_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="0 تومان"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color2"
+                    android:gravity="left"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="میزان تخفیف شما"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/hint_color"
+                    android:gravity="right"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    android:paddingRight="@dimen/margin_small"/>
+                <TextView
+                    android:id="@+id/basket_total_order_discount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="0 تومان"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color2"
+                    android:gravity="left"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="تاریخ ثبت سفارش"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/hint_color"
+                android:gravity="right"
+                android:drawableRight="@drawable/ic_baseline_arrow_left"
+                android:paddingRight="@dimen/margin_small"/>
+            <TextView
+                android:id="@+id/basket_total_order_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="99/09/23"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/text_color2"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/hint_color"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="مبلغ پرداخته شده"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/hint_color"
+                    android:gravity="right"
+                    android:drawableRight="@drawable/ic_baseline_arrow_left"
+                    android:paddingRight="@dimen/margin_small"/>
+                <TextView
+                    android:id="@+id/basket_total_order_final_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="0 تومان"
+                    android:textSize="@dimen/text_size_larg"
+                    android:textColor="@color/colorAccent2"
+                    android:gravity="left"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

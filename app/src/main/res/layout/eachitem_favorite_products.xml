@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    >
+
+    <LinearLayout
+        android:id="@+id/eachItem_favorite_box"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/selector_background_white"
+            android:paddingBottom="@dimen/margin_normal"
+            android:layout_margin="@dimen/margin_elevation"
+            android:elevation="4dp"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/eachItem_favorite_image"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/product_eachitem"
+                    android:adjustViewBounds="true"
+                    android:visibility="visible"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/eachItem_favorite_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="نام محصول"
+                        android:textColor="@color/text_color2"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textSize="@dimen/text_size_larg"
+                        android:ellipsize="end"
+                        />
+                    <TextView
+                        android:id="@+id/eachItem_favorite_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="توضیحات محصول با توجه به ویژگی های و نکات مختلف بر اساس موارد بیان شده در صفحه توضیحات"
+                        android:textColor="@color/hint_color"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:textSize="@dimen/text_size_normal"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:gravity="center"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="قیمت :"
+                                android:textColor="@color/text_color2"
+                                android:textSize="@dimen/text_size_normal"/>
+                            <TextView
+                                android:id="@+id/eachItem_favorite_price"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:text="25000"
+                                android:gravity="left|center"
+                                android:paddingLeft="@dimen/margin_small"
+                                android:layout_marginRight="@dimen/margin_normal"
+                                android:textColor="@color/colorAccent2"
+                                android:textSize="@dimen/text_size_normal"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:src="@drawable/toman"
+                                />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            />
+                        <ImageButton
+                            android:id="@+id/eachItem_favorite_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_botton_white_round_orange"
+                            android:src="@drawable/ic_action_shopping_delete"
+                            android:padding="@dimen/margin_small"
+                            android:elevation="3dp"
+                            android:layout_margin="@dimen/margin_elevation"/>
+                        <ImageButton
+                            android:id="@+id/eachItem_favorite_basket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_botton_white_round_orange"
+                            android:src="@drawable/ic_action_shopping_basket"
+                            android:padding="@dimen/margin_small"
+                            android:elevation="3dp"
+                            android:layout_margin="@dimen/margin_elevation"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

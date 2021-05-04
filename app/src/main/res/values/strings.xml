@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">HooraTeb</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">خانه</string>
+    <string name="title_category">دسته بندی</string>
+    <string name="title_basket">سبد خرید</string>
+    <string name="title_account">پروفایل</string>
+
+    <string name="basket_tab_text_1">سبد خرید</string>
+    <string name="basket_tab_text_2">محصولات مورد علاقه</string>
+
+    <string name="basket_tab_registration_title">ورود به حساب کاربری</string>
+    <string name="basket_tab_registration_description">برای دسترسی به این بخش ابتدا باید\n وارد حساب کاربری خود شوید</string>
+    <string name="basket_tab_registration_button">ورود یا ثبت نام</string>
+    <string name="basket_tab_empty_title">سبد خرید شما خالی است</string>
+    <string name="basket_tab_empty_description">با کلیک بر روی ایکون سبد در هر محصول\nمی توانید آن را به سبد خرید خود منتقل\nنمایید و سپس مراحل پرداخت و خرید را تکمیل نمایید</string>
+    <string name="favorite_tab_empty_title">لیست موردعلاقه شما خالی است</string>
+    <string name="favorite_tab_empty_description">با کلیک بر روی ایکون قلب در هر محصول\nمی توانید آن را به لیست مورد علاقه خود منتقل\nنمایید تا در صورت تمایل آن را دوباره مشاهده\nنموده یا به سبد خرید خود منتقل نمایید</string>
+
+    <string name="account_address_alarm_title">افزودن آدرس محل دریافت</string>
+    <string name="account_address_alarm_description">برای دریافت محصولات لطفا آدرس محلی که\nمایل به دریافت محصولات خود هستید را وارد نمایید</string>
+    <string name="account_address_alarm_button">افزودن آدرس</string>
+    <string name="account_address_alarm_title3"></string>
+
+
+    <string name="activity_login_title">"ساخت حساب کاربری جدید\nاطلاعات خود را وارد نمایید"</string>
+    <string name="activity_login_title2">"ورود به حساب کاربری\nاطلاعات خود را وارد نمایید"</string>
+    <string name="activity_login_forget_password">"رمز خود را فراموش کرده اید ؟"</string>
+    <string name="activity_login_new_account">"ساخت حساب کاربری جدید"</string>
+    <string name="activity_support_account">"ارتباط با پشتیبانی"</string>
+    <string name="activity_login_has_account">"حساب کاربری ساخته اید ؟ برای ورود اینجا کلیک کنید"</string>
+    <string name="activity_login_hit_password">"رمز عبور"</string>
+    <string name="activity_login_hit_username">"---------09"</string>
+    <string name="activity_login_next_btn">"ورود"</string>
+    <string name="activity_register_next_btn">"ثبت نام"</string>
+
+    <string name="activity_forget_phone">"برای تغییر رمز عبور ابتدا\nشماره موبایل خود را وارد نمایید"</string>
+    <string name="activity_forget_verify">"کد تایید ارسال شده به تلفن\nهمراه خود را وارد نمایید"</string>
+    <string name="activity_forget_password">"رمز عبور جدید\nرا انتخاب نمایید"</string>
+    <string name="activity_forget_verify_title">"****"</string>
+
+</resources>
